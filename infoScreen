@@ -1,0 +1,42 @@
+import React from "react";
+import { View, Text, StyleSheet, Button } from "react-native";
+
+export default function InfoScreen({ navigation }) {
+  return (
+    <View style={estilos.container}>
+      <Text style={estilos.titulo}>Sobre o app MOBILE II</Text>
+
+      <Text style={estilos.texto}>
+        Essa é uma tela simples para mostrar a navegação entre páginas no app MOBILE II, feito com React Native.
+      </Text>
+
+      <Button
+        title="Voltar para a página inicial"
+        onPress={() => navigation.navigate("Main")}
+      />
+    </View>
+  );
+}
+
+const estilos = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 30,
+    backgroundColor: "#fafafa",
+  },
+  titulo: {
+    fontSize: 26,
+    fontWeight: "600",
+    marginBottom: 16,
+    color: "#222",
+  },
+  texto: {
+    fontSize: 17,
+    color: "#444",
+    marginBottom: 30,
+    textAlign: "center",
+    lineHeight: 23,
+  },
+});
